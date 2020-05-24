@@ -1,0 +1,52 @@
+<html>
+	<body>
+		<form>
+			<p> 1. Орган для распознавания запахов. <span style="color: blue;" > /.о./ </span></p>
+			<p> 2. Друг человека. <span style="color: blue;" > /.(оба){1}.а/ </span></p>
+			<p> 3. Раздражающее кровососущее насекомое. <span style="color: blue;" > /(Ко|Ре)м.р/ </span></p>
+			<p> 4. Чувство самоотверженной, сердечной привязанности. <span style="color: blue;" > /.(ше|юб).{2}ь/ </span></p>
+			<p> 5. Ее постоянно нужно мыть. <span style="color: blue;" > /.(ос).д[а-я]/ </span></p>
+			<p> 6. Бодрящий напиток. <span style="color: blue;" > /.\Sф[а-я]/ </span></p>
+			<p> 7. Лучшие люди на свете. <span style="color: blue;" > /.(ме|ру)з.я/ </span></p>
+			<p> 8. Вид искусства. <span style="color: blue;" > /[А-Я](уз).к[а-я]/ </span></p>
+			<p> 9. Очень странная кошка. <span style="color: blue;" > /.а[а-р]у(а|л|б|ч)/ </span></p>
+			<p> 10. Приносят курочки. <span style="color: blue;" > /[А-Я]й.о/ </span></p>
+			1.	<input type="text" value=""> <br><br>  	
+			2.	<input type="text" value=""> <br><br>  
+			3.	<input type="text" value=""> <br><br>  
+			4.	<input type="text" value=""> <br><br> 
+			5.	<input type="text" value=""> <br><br> 
+			6.	<input type="text" value=""> <br><br> 
+			7.	<input type="text" value=""> <br><br> 	
+			8.	<input type="text" value=""> <br><br> 
+			9.	<input type="text" value=""> <br><br> 
+			10.	<input type="text" value=""> <br><br>  
+		</form>
+		<input type="button" value="Отправить результаты" onclick=check()>
+		<script>
+			let rightanswers =
+			[
+			"Нос",
+			"Собака",
+			"Комар",
+			"Любовь",
+			"Посуда",
+			"Кофе",
+			"Друзья",
+			"Музыка",
+			"Манул",
+			"Яйцо",
+			];
+			
+			function check() {
+				for (let i = 0; i < document.forms[0].length; i++  ) {
+				if ( JSON.stringify( document.forms[0].elements[i].value ) === JSON.stringify( rightanswers[i]) )
+				{ document.forms[0].elements[i].value = 'Правильно' }
+	
+				else
+				{ document.forms[0].elements[i].value = 'Не правильно' }
+			}
+			};
+		</script>
+	</body>
+</html>
